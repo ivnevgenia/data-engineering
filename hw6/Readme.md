@@ -35,8 +35,9 @@ df_repart.write.mode("overwrite").parquet(output_path)
 parquet_files = glob.glob(f"{output_path}/*.parquet")
 sizes_mb = [os.path.getsize(f)/1024/1024 for f in parquet_files]
 avg_size = sum(sizes_mb)/len(sizes_mb)
-Answer: 25MB average file size
 ```
+**Answer:** 25MB average file size
+
 **Question 3:** Trip Count for November 15
 
 **Task:** Count trips that started on November 15, 2025.
