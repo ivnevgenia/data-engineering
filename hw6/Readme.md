@@ -2,6 +2,7 @@
 This repository contains my solutions for Module 6 of the Data Engineering Zoomcamp by DataTalksClub. The homework focuses on Apache Spark fundamentals using PySpark to process New York Yellow Taxi trip data from November 2025.
 
 ## Homework Questions & Solutions
+
 **Question 1**: Spark Installation & Version Check
 
 **Task:** Install Spark, create a local session, and check the version.
@@ -21,6 +22,7 @@ print("Spark version:", spark.version)
 **Output:** Spark version: 3.5.0
 
 **Question 2:** Parquet File Partitioning
+
 **Task:** Repartition the data into 4 partitions and calculate average file size.
 
 **Solution:**
@@ -36,6 +38,7 @@ avg_size = sum(sizes_mb)/len(sizes_mb)
 Answer: 25MB average file size
 ```
 **Question 3:** Trip Count for November 15
+
 **Task:** Count trips that started on November 15, 2025.
 
 **Solution:**
@@ -48,6 +51,7 @@ count_15 = df_15.count()
 Answer: 162,604 trips
 ```
 **Question 4:** Longest Trip Duration
+
 **Task:** Find the maximum trip duration in hours.
 
 **Solution:**
@@ -65,11 +69,13 @@ longest_trip = df_with_duration.select(spark_max("duration_hours")).collect()[0]
 **Answer:** 90.6 hours
 
 **Question 5:** Spark UI Port
+
 **Task:** Identify the local port where Spark's web UI runs.
 
 **Answer:** 4040 - The Spark application dashboard is available at http://localhost:4040 during job execution.
 
 **Question 6:** Least Frequent Pickup Zone
+
 **Task:** Join with zone lookup data to find the least frequent pickup location.
 
 **Solution:**
